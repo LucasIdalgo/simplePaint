@@ -15,7 +15,7 @@ public class Linha {
         this.paint = Estilo.getEstilosParaLinha();
     }
 
-    //Construtor linha verde
+    //Construtor linha outra cor
     public Linha(Context context, Path path, Paint paint){
         this.path = path;
         this.paint = paint;

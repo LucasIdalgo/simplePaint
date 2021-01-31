@@ -24,4 +24,14 @@ public class Estilo {
         estiloLinhaVerde.setStrokeJoin(Paint.Join.ROUND);
         return estiloLinhaVerde;
     }
+    
+    public static Paint getEstiloParaLinhaAmarela(){
+        Paint retangulo = new Paint();
+        retangulo.setAntiAlias(true);
+        retangulo.setColor(Color.YELLOW);
+        retangulo.setStyle(Paint.Style.STROKE);
+        retangulo.setStrokeWidth(4f);
+        retangulo.setStrokeJoin(Paint.Join.ROUND);
+        return retangulo;
+    }
 }

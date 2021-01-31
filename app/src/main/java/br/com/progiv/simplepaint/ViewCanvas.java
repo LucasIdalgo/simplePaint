@@ -3,6 +3,7 @@ package br.com.progiv.simplepaint;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.util.AttributeSet;
@@ -25,9 +26,15 @@ public class ViewCanvas extends View {
         inicializaObjetos();
     }
 
-    public void  inicializaObjetosVerde(){
+    public void inicializaObjetosVerde(){
         path = new Path();
         Paint paint = Estilo.getEstiloParaLinhaVerde();
+        linha = new Linha(getContext(), path, paint);
+    }
+
+    public void inicializaObjetosAmarelo(){
+        path = new Path();
+        Paint paint = Estilo.getEstiloParaLinhaAmarela();
         linha = new Linha(getContext(), path, paint);
     }
 
@@ -65,6 +72,7 @@ public class ViewCanvas extends View {
     //controlar limpeza da tela
     public void limparCanvas(){
         path.reset();
+        inicializaObjetos();
         invalidate();
     }
 
