@@ -9,10 +9,16 @@ public class Linha {
     private Path path;
     private Paint paint;
 
-    //Construtor
+    //Construtor linha
     public Linha(Context context, Path path){
         this.path = path;
         this.paint = Estilo.getEstilosParaLinha();
+    }
+
+    //Construtor linha verde
+    public Linha(Context context, Path path, Paint paint){
+        this.path = path;
+        this.paint = paint;
     }
 
     public void desenharLinha(Canvas canvas){
